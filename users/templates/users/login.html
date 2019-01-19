@@ -1,0 +1,111 @@
+
+        
+        {% load static %}
+
+
+        {% include 'blog/navbar.html' %}
+
+
+
+
+
+
+
+
+
+   
+        {% if title  %}
+
+        <title>DSI LaPoste - {{ title }}</title>
+    
+        {% else %}
+          
+         <title>DSI LaPoste</title>
+    
+         {% endif %}
+    
+
+
+
+
+{% block content %}   
+
+<center>
+
+
+
+    <style>
+        body { margin-top: -70px; }
+    </style>
+
+
+<div class="main">
+
+        <!-- Sing in  Form -->
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="{% static 'login/images/signin-image.jpg' %}" alt="sing up image"></figure>
+                        <a href="{% url 'users:signup' %}" class="signup-image-link">Créer un compte</a>
+                    </div>
+
+                    <div class="signin-form">
+                        <h2 class="form-title">S'authentifier</h2>
+                        {% if  error %}
+                        <div class="alert alert-danger" role="alert">
+                                Veuillez vérifier vos infos
+                              </div>
+                        {% endif %}
+                        <form method="POST" class="register-form" id="login-form">
+                                {% csrf_token %}
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email" id="email" placeholder="Votre Email"/>
+                                {% if  username_error %}
+                                <div class="alert alert-danger" role="alert">
+                                       Verifier votre adresse email 
+                                      </div>
+                                {% endif %} 
+                            </div>
+                            <div class="form-group">
+                                <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="password" id="password" placeholder="Password"/>
+                                {% if  password_error %}
+                                <div class="alert alert-danger" role="alert">
+                                        Mot de trop court,minumun 5 caracteres
+                                      </div>
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Souviens-toi de moi</label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                            </div>
+                        </form>
+                        <div class="social-login">
+                            <span class="social-label">Ou connectez avec</span>
+                            
+                            <ul class="socials">
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</center>
+
+{% endblock %}
+
+
+
+
+{% include 'blog/footer.html' %}

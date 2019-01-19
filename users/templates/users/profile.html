@@ -1,0 +1,29 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+
+
+
+
+
+
+{% block content %}   
+
+    <div class="content-section">
+        <div class="medias">
+            <img class="rounded-circle account-img" src="" alt="">
+            <div class="media-body">
+                <h2 class="media-heading">{{user.name}}</h2>
+                <p class="text-secondary">{{user.email}}</p>
+
+            </div>
+
+        </div>
+        
+    </div>
+
+
+
+
+
+{% endblock %}

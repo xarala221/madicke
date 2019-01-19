@@ -1,0 +1,91 @@
+{% load static %}
+
+
+
+{% include 'blog/navbar.html' %}
+
+
+<style>
+     #content {
+    width: 1100px;
+}
+</style>
+
+<head>
+    
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+<!------ Include the above in your HEAD tag ---------->
+
+
+
+
+
+
+
+   {% if title  %}
+
+    <title>DSI LaPoste - {{ title }}</title>
+
+    {% else %}
+      
+     <title>DSI LaPoste</title>
+
+     {% endif %}
+
+         
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+        {% block content %}
+
+       
+
+      
+
+        {% endblock content%}
+
+
+       
+       
+
+        <style>
+         footer{ margin-top: 130px; }
+        </style>
+                    
+        
+
+
+
+
+
+                    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+                    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+                
+                    <script language="JavaScript" src="https://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+                    <script language="JavaScript" src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js" type="text/javascript"></script>
+                    <script language="JavaScript" src="https://cdn.datatables.net/plug-ins/3cfcc339e89/integration/bootstrap/3/dataTables.bootstrap.js" type="text/javascript"></script>
+
+
+
+
+
+
+</body>
+
+
+
+{% include 'blog/footer.html' %}
+

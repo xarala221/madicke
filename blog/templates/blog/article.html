@@ -1,0 +1,133 @@
+{% extends "blog/base.html" %}
+
+ {% block content %}
+
+ <style>
+  body { margin-top: 201px;
+     
+   }
+
+  
+
+ </style>
+ 
+ <center>
+
+ <h1>Blog Creation d'article</h1>
+
+ <div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center mb-5">Bootstrap 4 Forms</h2>
+            <ul class="nav nav-fill">
+                <a class="nav-item" href="#formLogin">Login</a>
+                <a class="nav-item" href="#formRegister">Sign-up</a>
+                <a class="nav-item" href="#formChangePassword">Password</a>
+                <a class="nav-item" href="#formResetPassword">Reset</a>
+                <a class="nav-item" href="#formPayment">Payment</a>
+                <a class="nav-item" href="#formUserEdit">User</a>
+                <a class="nav-item" href="#formContact">Contact</a>
+                <a class="nav-item" href="#formComplex">Complex</a>
+            </ul>
+            <hr class="mb-5">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <span class="anchor" id="formLogin"></span>
+
+                    <!-- form card login with validation feedback -->
+                    <div class="card card-outline-secondary">
+                        <div class="card-header">
+                            <h3 class="mb-0">Login</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off" id="loginForm" novalidate="" method="POST">
+                                <div class="form-group">
+                                    <label for="uname1">Username</label>
+                                    <input type="text" class="form-control" name="uname1" id="uname1" required="">
+                                    <div class="invalid-feedback">Please enter your username or email</div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" id="pwd1" required="" autocomplete="new-password">
+                                    <div class="invalid-feedback">Please enter a password</div>
+                                </div>
+                                <div class="form-check small">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input"> <span>Remember me on this computer</span>
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Login</button>
+                            </form>
+                        </div>
+                        <!--/card-body-->
+                    </div>
+                    <!-- /form card login -->
+
+                </div>
+                <div class="col-md-6 offset-md-3">
+                    <span class="anchor" id="formRegister"></span>
+                    <hr class="mb-5">
+
+                    <!-- form card register -->
+                    <div class="card card-outline-secondary">
+                        <div class="card-header">
+                            <h3 class="mb-0">Sign Up</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off">
+                                <div class="form-group">
+                                    <label for="inputName">Name</label>
+                                    <input type="text" class="form-control" id="inputName" placeholder="Full name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail3">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword3">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputVerify3">Verify</label>
+                                    <input type="password" class="form-control" id="inputVerify3" placeholder="Password (again)" required="">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success btn-lg float-right">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /form card register -->
+
+                </div>
+                
+                    </div>
+
+                </div>
+
+            </div>
+            <!--/row-->
+
+        <br><br><br><br>
+
+        
+        <!--/col-->
+  
+    <!--/row-->
+    <hr>
+    <p class="text-center">The End.<br>
+        <a class="small text-info d-inline-block" href="https://www.codeply.com/bootstrap-4-examples">More Bootstrap 4 Examples</a>
+    </p>
+    
+</div>
+<!--/container-->
+
+</center>
+
+<p></p>
+<p></p>
+<p></p>
+
+
+ {% endblock content %}
+

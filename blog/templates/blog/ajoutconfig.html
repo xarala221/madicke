@@ -1,0 +1,131 @@
+
+{% load static %}
+
+
+
+{% include 'blog/navbar.html' %}
+
+
+
+
+
+
+<link href="{% static 'ajoutconfig/ajoutconfig.css' %}" rel="stylesheet">
+
+<style>
+    label{
+        display: none;
+    }
+    .errorlist{
+        display: none;
+    }
+    #id_types{
+        width: 460px;
+    }
+    #id_equipement{
+     width: 460px;
+    }
+    
+</style>
+
+
+
+{% if title  %}
+
+<title>DSI LaPoste - {{ title }}</title>
+
+{% else %}
+  
+ <title>DSI LaPoste</title>
+
+ {% endif %}
+
+
+
+
+ 
+        
+{% block  content %}
+
+
+
+<center>
+
+        <style>
+                body { margin-top: 50px; }
+            </style>
+ 
+     
+      <!-- Sections -->
+            <section id="contact">
+                <div id="map"></div>
+                {% if send  %}
+
+           reussi
+                {% else %}
+
+    
+                <div class="container text-center">
+                        
+                    <!-- Example row of columns -->
+                    <div class="row">
+                        <div class="col-md-9 col-md-offset-10 col-sm-12 col-xs-12">
+                            <div class="contact-form-area">
+                                <form method="POST" enctype="multipart/form-data" action="." class="post-form">{% csrf_token %}
+
+
+
+                        <div class="form-group">
+                         <label class="control-label col-sm-2" for="equipement">Equipement:</label>
+                           <div class="col-sm-10">
+                            {{ form.equipement}}
+                           </div>
+                      </div>             
+                                   
+
+                                    
+                      <div class="form-group">
+                         <label class="control-label col-sm-2" for="types">Types:</label>
+                           <div class="col-sm-10">
+                               {{ form.types }}
+                           </div>
+                      </div>
+
+                                
+                      
+                     <div class="form-group">
+                         <label class="control-label col-sm-2" for="description">Description:</label>
+                            <div class="col-sm-10">
+                                {{ form.description}} 
+                            </div>
+                     </div>   
+                                    
+
+                     <button type="submit"  class="save btn btn-primary col-md-3">ajouter</button>
+                                </form>
+                            </div>	
+                        </div>
+
+                {% endif %}
+                    </div>
+                </div> <!-- /container -->       
+            </section>
+
+          
+          
+            
+</center>
+
+
+{% endblock content %}
+
+
+
+
+
+<script src="{% static 'ajoutconfig/ajoutconfig.js' %}" ></script>
+
+
+
+
+{% include 'blog/footer.html' %}

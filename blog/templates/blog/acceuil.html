@@ -1,0 +1,81 @@
+
+
+ {% extends "blog/base.html" %}
+ {% load static %}
+
+ <link href="{% static 'acceuil/acceuil.css' %}" rel="stylesheet">
+ <link rel="stylesheet" href="{% static 'acceuil/image.css' %}" >
+
+ 
+ {% block content %}
+
+ {% include 'blog/slider.html' %}
+
+
+ <div class="container"  id="content">
+       
+     
+ <h1 class=" mb-5"> <style> body { color: rgb(211, 43, 226); }</style> Plateforme De Gestion d'Equipements De La DSI  LaPoste  </h1>
+     
+    <div class="row ">
+
+
+        <div class="col-md-4 paddingTB20">       
+              <div class="col-md-12 text-center">
+                <img src="{% static 'imagesreseau/dsi4.jpg' %}" class="images" class="img-responvie" alt="">   
+            </div>
+         </div>
+
+
+
+
+        <div class="col-md-4 paddingTB20">              
+            <div class="col-md-12 text-center">
+              <img src="{% static 'imagesreseau/dsi6.jpg' %}" class="images" class="img-responvie" alt="">   
+            </div>
+         </div>
+ 
+
+
+
+
+        
+        <div class="col-md-4 paddingTB20">                 
+            <div class="col-md-12 text-center">
+                <img src="{% static 'imagesreseau/dsi8.png' %}"  class="img-responvie" alt="">   
+          </div>
+        </div>  
+
+
+
+
+
+        <div class="col-md-4 paddingTB20">                 
+            <div class="col-md-12 text-center">
+                <img src="{% static 'imagesreseau/dsi7.jpg' %}"  class="img-responvie" alt="">   
+          </div>
+         </div> 
+ 
+
+
+
+        <div class="col-md-4 paddingTB20">               
+            <div class="col-md-12 text-center">
+               <img src="{% static 'imagesreseau/dsi5.jpg' %}" class="images" class="img-responvie" alt="">   
+           </div>
+        </div>
+
+
+
+
+        <div class="col-md-4 paddingTB20">                 
+            <div class="col-md-12 text-center">
+                <img src="{% static 'imagesreseau/dsi11.png' %}" class="img-responvie" alt="">   
+          </div>
+         </div>
+
+   </div>
+</div>
+
+{% endblock content %}
+    

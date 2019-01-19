@@ -1,0 +1,52 @@
+
+ 
+  {% extends "blog/base.html" %}
+
+  {% load static %}
+ 
+
+
+ {% block content %}
+    
+
+ <style>
+   body { margin-top: 201px; }
+  </style>
+
+<center>
+
+  <h1>Blog PoolDev</h1>
+ 
+  <div class="container py-5">
+     <div class="row">
+         <div class="col-md-12">
+            <h1 class="text-center mb-5">Tâches Administratives</h1>
+             <ul class="nav nav-fill">
+                 <a class="nav-item" href="{% url 'listeconfig' %}"><button type="button" class="btn btn-success">Liste Equipement</button></a>
+                 <a class="nav-item" href="{% url 'ajoutconfig' %}"><button type="button" class="btn btn-success">Ajouter Equipement</button></a>
+                 <a class="nav-item" href="#formChangePassword"><button type="button" class="btn btn-success">Modifier Equipement</button></a>
+                 <a class="nav-item" href="#formResetPassword"><button type="button" class="btn btn-success">Supprimer Equipement</button></a>
+                
+             </ul>
+             
+ 
+                 </div>
+ 
+             </div>
+             <!--/row-->
+ 
+         <br><br><br><br>
+ 
+         
+         <!--/col-->
+   
+     <!--/row-->
+     <hr>
+     
+ </div>
+ <!--/container-->
+
+
+
+ </center>
+ {% endblock content %}

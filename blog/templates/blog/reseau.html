@@ -1,0 +1,93 @@
+
+
+
+
+
+
+  {% extends "blog/base.html" %}
+
+ {% load static %}
+
+ {% block content %}
+ <link rel="stylesheet" href="{% static 'reseau/reseau.css' %}" >
+
+
+ <style>
+   body { margin-top: 120px; }
+   
+  </style>
+
+<center>
+
+  <h1>Blog Reseau</h1>
+  <h1 class="text-center mb-5">Tâches Administratives</h1>
+ 
+  <div class="container py-5">
+     <div class="row">
+
+            <div class="col-md-4">
+                    <div class="card-content">
+                        <div class="card-img">
+                            <img src="{% static 'imagesreseau/1.jpg' %}"  alt="">
+                            <span><h4>tâche 1</h4></span>
+                        </div>
+                        <div class="card-desc">
+                            <h3>Tâche 1</h3>
+                            <p>L'Administrateur reseau peut voir l'ensemble des types d'equipements: Routeurs, Switchs, AP
+                              , etc... et leurs configurations...</p>
+                                <a href="{% url 'listeconfig' %}" class="btn-card">Liste configuration</a>   
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-content">
+                        <div class="card-img">
+                            <img src="{% static 'imagesreseau/2.jpg' %}"  alt="">
+                            <span><h4>tâche 2</h4></span>
+                        </div>
+                        <div class="card-desc">
+                            <h3>Tâche 2</h3>
+                            <p>L'Administrateur reseau peut ajouter tous les types d'equipements: Routeurs, Switchs, AP
+                              , etc... et leurs configurations...</p>
+                                <a href="{% url 'ajoutconfig' %}" class="btn-card">Ajout configuration</a>   
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-content">
+                        <div class="card-img">
+                            <img src="{% static 'imagesreseau/3.jpg' %}"  alt="">
+                            <span><h4>tâche 3</h4></span>
+                        </div>
+                        <div class="card-desc">
+                            <h3>Tâche 3</h3>
+                            <p>L'Administrateur reseau peut modifier l'ensemble les types d'equipements: Routeurs, Switchs, AP
+                              </p>
+                                <a href="{% url 'users:login' %}" class="btn-card">Modi configuration</a>   
+                        </div>
+                    </div>
+         
+    </div>
+             <!--/row-->
+ 
+         <br><br><br><br>
+ 
+         
+         <!--/col-->
+   
+     <!--/row-->
+     <hr>
+     
+ </div>
+ <!--/container-->
+
+
+
+ </center>
+ {% endblock content %}
+
+
+
+
+ 
+
