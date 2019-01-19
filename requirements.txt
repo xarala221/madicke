@@ -13,5 +13,5 @@ pylint==2.2.2
 pytz==2018.7
 six==1.12.0
 typed-ast==1.2.0
-whitenoise==4.1.2
+whitenoise==3.2
 wrapt==1.11.0
